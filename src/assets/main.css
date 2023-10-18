@@ -1,0 +1,55 @@
+@import "./base.css";
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+.green-button {
+  text-decoration: none;
+  background-color: hsla(160, 100%, 37%, 1);;
+  color: white;
+  border-radius: 10px;
+  border-width: none;
+  font-size: 24px;
+  font-weight: 500;
+  width: 120px;
+  transition: 0.4s;
+  margin-top: 20px;
+}
+
+@media (min-width: 400px) and (max-width: 1023px) {
+  .green-button {
+    display: flex;
+    margin: 20px auto auto auto;
+  }
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
