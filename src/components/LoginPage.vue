@@ -15,7 +15,7 @@ export default {
   methods: {
     async login(username, password) {
       const config = {
-        headers: { Authorization: `Bearer ${this.token}` },
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       };
       const bodyParameters = {
         username: username,
@@ -26,8 +26,8 @@ export default {
           bodyParameters,
           config,
         })
-        .then(console.log())
-        .catch(console.log());
+        .then(console.log("Login Sukses"))
+        .catch(console.log("Login Gagal"));
     },
   },
 };

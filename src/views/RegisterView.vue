@@ -37,7 +37,7 @@ export default {
   methods: {
     async login(email, username, password) {
       const config = {
-        headers: { Authorization: `Bearer ${this.token}` },
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       };
       const bodyParameters = {
         email: email,
